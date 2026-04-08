@@ -65,7 +65,7 @@
           "Crashlytics",
           "Datadog"
         ],
-        "image": "projects/mottu.svg",
+        "image": "projects/mottu.png",
         "status": "live",
         "link": "https://mottu.com.br/"
       },
@@ -79,7 +79,7 @@
           "Integração Drift DB"
         ],
         "tech": ["Flutter", "Drift", "Offline-first"],
-        "image": "projects/sif.png",
+        "image": "projects/prodabel.png",
         "status": "live"
       },
       {
@@ -92,7 +92,7 @@
           "Heurísticas avançadas para sistemas de pontos"
         ],
         "tech": ["Laravel", "MongoDB", "Flutter", "IA"],
-        "image": "projects/compartr.svg",
+        "image": "projects/compart.png",
         "status": "live",
         "link": "https://compart.com.br/"
       },
@@ -102,6 +102,7 @@
         "description": "Eu criei o Oráculo.ia para transformar a experiência de tarot e interpretação de sonhos. Desenvolvi 10 personas de IA únicas, integrei um backend escalável com Firebase e um frontend em Flutter. O app alcançou milhares de usuários, mostrando minha habilidade em IA produtizada e arquitetura robusta.",
         "highlights": ["Personas IA produtizadas", "Arquitetura escalável"],
         "tech": ["Flutter", "Firebase", "IA"],
+        "image": "projects/oraculo.png",
         "status": "live"
       },
       {
@@ -109,6 +110,7 @@
         "description": "Com o LotoMind, eu criei um app de loterias que vai além do básico. Desenvolvi um motor de geração de jogos customizado e uma interface intuitiva, otimizando fluxos repetíveis e melhorando significativamente a experiência do usuário.",
         "highlights": ["Motor de geração customizado", "UX otimizada"],
         "tech": ["Flutter"],
+        "image": "projects/lotomind.png",
         "status": "live"
       },
       {
@@ -119,6 +121,7 @@
           "Automação de publicação"
         ],
         "tech": ["Python", "IA", "WordPress"],
+        "image": "projects/content-machine.png",
         "status": "live"
       },
       {
@@ -126,6 +129,7 @@
         "description": "No Forge, eu projetei uma plataforma para equipes de jogos que combina ferramentas de planejamento por fatia, estimativas por senioridade e cards IA. Meu objetivo foi facilitar a colaboração e organização de equipes criativas, trazendo inovação ao processo de desenvolvimento de jogos.",
         "highlights": ["Planejamento por fatia", "Cards IA tipo Trello"],
         "tech": ["Laravel", "IA"],
+        "image": "projects/forge.png",
         "status": "wip"
       },
       {
@@ -133,6 +137,7 @@
         "description": "Desenvolvi o PlantGrow para ajudar agricultores a planejar cultivos de forma inteligente. Criei um sistema de recomendações baseadas em fotos e agendamento automático, com um backend robusto em Laravel e um frontend intuitivo em Flutter.",
         "highlights": ["Recomendações por foto", "Agendamento automático"],
         "tech": ["Laravel", "Flutter", "Análise de Imagens"],
+        "image": "projects/plantgrow.jpeg",
         "status": "archived"
       },
       {
@@ -140,6 +145,7 @@
         "description": "Com o Wowe, eu criei uma rede social para fotógrafos, focada em segurança e eficiência. Desenvolvi um pipeline seguro para upload e processamento de imagens, utilizando uma arquitetura fullstack com Flutter e Laravel.",
         "highlights": ["Pipeline seguro de imagens", "Arquitetura fullstack"],
         "tech": ["Flutter", "Laravel"],
+        "image": "projects/wowe.png",
         "status": "archived"
       },
       {
@@ -147,6 +153,7 @@
         "description": "GOAT foi meu primeiro jogo mobile, onde implementei controles por acelerômetro e um sistema de ranking online. Desenvolvi um backend customizado em CodeIgniter, explorando sensores mobile de forma pioneira.",
         "highlights": ["Ranking online", "Sensores mobile"],
         "tech": ["Flash Air", "CodeIgniter", "Sensores Mobile"],
+        "image": "projects/goat.png",
         "status": "archived"
       },
       {
@@ -157,6 +164,7 @@
           "Integração hardware/software"
         ],
         "tech": ["Python", "RetroOrange Pi", "CNC", "GPIO"],
+        "image": "projects/tz-games.jpg",
         "status": "archived"
       },
       {
@@ -167,6 +175,7 @@
           "Integração com RetroOrange Pi"
         ],
         "tech": ["Python", "GPIO", "RetroOrange Pi"],
+        "image": "projects/gpio.jpeg",
         "status": "live"
       },
       {
@@ -174,6 +183,7 @@
         "description": "No RetrieverApp, implementei fluxos de pagamento seguros com Stripe, garantindo reconciliação e webhooks confiáveis. Meu trabalho melhorou a experiência de pagamento para milhares de usuários.",
         "highlights": ["Pagamentos seguros", "Reconciliação confiável"],
         "tech": ["Laravel", "Stripe"],
+        "image": "projects/retrieverapp.png",
         "status": "live"
       },
       {
@@ -181,6 +191,7 @@
         "description": "Liderar a refatoração do IdealPet foi um desafio que abracei. Transformei a arquitetura de Clean Arch para MVC com GetX, eliminando gargalos de entrega. Também implementei reconhecimento facial de pets e identidade NFC, trazendo inovação ao app.",
         "highlights": ["Reconhecimento facial de pets", "Identidade NFC"],
         "tech": ["Flutter", "GetX", "NFC", "Computer Vision"],
+        "image": "projects/idealpet.png",
         "status": "live"
       },
       {
@@ -188,6 +199,7 @@
         "description": "Com o Safebox, desenvolvi um cofre local criptografado com AES-256, integrando sync diferencial cifrado e backup assinado. Minha solução trouxe segurança e compliance para armazenamento de dados sensíveis.",
         "highlights": ["Cofre cifrado", "Backup assinado"],
         "tech": ["Criptografia", "Sync cifrado", "RBAC"],
+        "image": "projects/safebox.png",
         "status": "wip"
       },
       {
@@ -195,6 +207,7 @@
         "description": "No Morian, lidero o desenvolvimento de um platformer 2.5D autoral. Enfrentei desafios de design procedural e integração de assets no Blender, criando ferramentas colaborativas que otimizam o fluxo de trabalho da equipe.",
         "highlights": ["Design procedural", "Ferramentas colaborativas"],
         "tech": ["Unreal Engine 5", "Blender", "Blueprints"],
+        "image": "projects/morian.png",
         "status": "wip"
       }
     ],

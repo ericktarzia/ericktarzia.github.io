@@ -25,23 +25,13 @@ export default function About() {
             {t("about.p1")}
           </p>
 
-          <p className="text-gray-400 mb-3 leading-relaxed">
-            {t("about.p2")}
-          </p>
+          <p className="text-gray-400 mb-3 leading-relaxed">{t("about.p2")}</p>
 
-          <p className="text-gray-400 mb-3 leading-relaxed">
-            {t("about.p3")}
-          </p>
+          <p className="text-gray-400 mb-3 leading-relaxed">{t("about.p3")}</p>
 
-          <p className="text-gray-500 mb-2 leading-relaxed">
-            {t("about.p4")}
-          </p>
-          <p className="text-gray-400 mb-2 leading-relaxed">
-            {t("about.p5")}
-          </p>
-          <p className="text-gray-400 mb-4 leading-relaxed">
-            {t("about.p6")}
-          </p>
+          <p className="text-gray-500 mb-2 leading-relaxed">{t("about.p4")}</p>
+          <p className="text-gray-400 mb-2 leading-relaxed">{t("about.p5")}</p>
+          <p className="text-gray-400 mb-4 leading-relaxed">{t("about.p6")}</p>
 
           <div className="flex flex-wrap gap-3 items-center">
             <span className="px-3 py-1 bg-gray-800 rounded text-sm">
@@ -67,8 +57,8 @@ export default function About() {
         >
           <div className="w-56 h-56 bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
             <Image
-              src="/me.svg"
-              alt="Erick"
+              src="/me.png"
+              alt="Erick Tarzia"
               width={224} // 56 * 4 (w-56 em Tailwind equivale a 224px)
               height={224} // 56 * 4
               className="w-full h-full object-cover"
