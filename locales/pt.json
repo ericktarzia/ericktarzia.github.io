@@ -1,0 +1,307 @@
+{
+  "hero": {
+    "title": "Erick Tarzia",
+    "subtitle": "Construo sistemas, ferramentas e produtos que resolvem problemas reais."
+  },
+  "about": {
+    "title": "Sobre mim",
+    "p1": "Não sou só desenvolvedor — projeto e entrego sistemas que resolvem problemas reais, de hardware embarcado a apps mobile e backends escaláveis.",
+    "p2": "Com mais de 20 anos de experiência, atuo de sistemas embarcados e CNC até cloud, IA e apps mobile em produção.",
+    "p3": "Liderei times, lancei produtos e tive reconhecimento internacional pelo trabalho comunitário — fui presidente do Cartel Moto Clube durante a crise da COVID-19, coordenando ações de ajuda destacadas pela SkyNews.",
+    "p4": "Especialista em Flutter, resgate de legados, sistemas de alta demanda e arquitetura pragmática. Atuo como staff/lead engineer para desbloquear times e gerar impacto.",
+    "p5": "Expertise profunda em bancos de dados (MongoDB, MySQL, PostgreSQL, SQL Server), observabilidade e performance. Experiência inicial com Ajax/jQuery moldou minha entrega incremental e pragmática.",
+    "p6": "Fora da engenharia, naveguei liderança comunitária e áreas criativas — CACs e tatuagem me ensinaram liderança em crise, atenção ao detalhe e execução padrão solda em tudo que faço."
+  },
+  "nav": {
+    "projects": "Projetos",
+    "about": "Sobre",
+    "tools": "Ferramentas",
+    "hardware": "Hardware",
+    "games": "Jogos",
+    "wip": "WIP",
+    "databases": "Bancos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "name": "Erick Tarzia"
+  },
+  "external": {
+    "skynews": {
+      "text": "Cobertura SkyNews: ações de ajuda comunitária no Brasil (COVID-19)",
+      "url": "https://news.sky.com/story/coronavirus-inside-brazils-slums-where-covid-19-is-at-risk-of-spreading-like-wildfire-11995283"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "view": "Ver Projeto →",
+    "items": [
+      {
+        "title": "PDVs",
+        "role": "Engenheiro de Software Sênior",
+        "description": "Liderança no desenvolvimento de uma plataforma robusta para gestão de vendas e pagamentos em eventos de grande escala. Resolvi desafios complexos de integração com múltiplos provedores de pagamento (Cielo, GetNet) e dispositivos Gertec, garantindo alta confiabilidade em ambientes de alta demanda. A solução foi adotada por grandes marcas como McDonald's e Neo Química Arena, transformando a experiência de vendas e reduzindo falhas operacionais em eventos de grande porte.",
+        "highlights": [
+          "Integração com Cielo, GetNet e dispositivos Gertec",
+          "Impressoras Bluetooth e suporte a NFC",
+          "Modalidades cashless e tickets"
+        ],
+        "tech": ["Laravel", "Java", "PostgreSQL", "NFC"],
+        "image": "projects/pdvs.png",
+        "status": "live",
+        "link": "https://pdvs.com.br/"
+      },
+      {
+        "title": "Mottu",
+        "role": "Engenheiro Mobile Staff",
+        "description": "Desenvolvi soluções inovadoras para o maior aplicativo de locação de motos do mundo, enfrentando desafios como localização em tempo real e segurança de dados. Implementei reconhecimento facial para autenticação segura e fluxos financeiros integrados, garantindo a confiabilidade e escalabilidade do sistema. O impacto foi direto na vida de milhares de entregadores e lojistas, otimizando operações e aumentando a segurança.",
+        "highlights": [
+          "Localização e entrega em tempo real",
+          "Reconhecimento facial para segurança",
+          "Integrações financeiras e observabilidade"
+        ],
+        "tech": [
+          "Flutter",
+          "Next.js (BFF)",
+          "ML Kit",
+          "UNICO",
+          "Crashlytics",
+          "Datadog"
+        ],
+        "image": "projects/mottu.svg",
+        "status": "live",
+        "link": "https://mottu.com.br/"
+      },
+      {
+        "title": "SIF (Stefanini)",
+        "role": "Referência Técnica — Flutter",
+        "description": "Liderança técnica no desenvolvimento de um sistema de fiscalização offline-first para equipes de campo. Resolvi problemas de conectividade limitada com uma arquitetura robusta baseada em Drift DB e melhores práticas Flutter. O sistema garantiu a coleta confiável de dados em áreas remotas, aumentando a eficiência das operações de campo.",
+        "highlights": [
+          "Arquitetura offline-first para operações de campo",
+          "Liderança técnica Flutter",
+          "Integração Drift DB"
+        ],
+        "tech": ["Flutter", "Drift", "Offline-first"],
+        "image": "projects/sif.png",
+        "status": "live"
+      },
+      {
+        "title": "Compart",
+        "role": "Engenheiro Backend & Arquiteto",
+        "description": "Liderança no desenvolvimento de uma plataforma de trade marketing que transformou a forma como grandes marcas gerenciam auditorias e inteligência de dados. Resolvi desafios de auditabilidade e análise de dados em larga escala, integrando inteligência artificial para gerar insights acionáveis e melhorar a performance no ponto de venda.",
+        "highlights": [
+          "Auditabilidade com MongoDB",
+          "Inteligência artificial integrada ao app",
+          "Heurísticas avançadas para sistemas de pontos"
+        ],
+        "tech": ["Laravel", "MongoDB", "Flutter", "IA"],
+        "image": "projects/compartr.svg",
+        "status": "live",
+        "link": "https://compart.com.br/"
+      },
+      {
+        "title": "Oráculo.ia",
+        "role": "Founder & Engenheiro Mobile",
+        "description": "Eu criei o Oráculo.ia para transformar a experiência de tarot e interpretação de sonhos. Desenvolvi 10 personas de IA únicas, integrei um backend escalável com Firebase e um frontend em Flutter. O app alcançou milhares de usuários, mostrando minha habilidade em IA produtizada e arquitetura robusta.",
+        "highlights": ["Personas IA produtizadas", "Arquitetura escalável"],
+        "tech": ["Flutter", "Firebase", "IA"],
+        "status": "live"
+      },
+      {
+        "title": "LotoMind",
+        "description": "Com o LotoMind, eu criei um app de loterias que vai além do básico. Desenvolvi um motor de geração de jogos customizado e uma interface intuitiva, otimizando fluxos repetíveis e melhorando significativamente a experiência do usuário.",
+        "highlights": ["Motor de geração customizado", "UX otimizada"],
+        "tech": ["Flutter"],
+        "status": "live"
+      },
+      {
+        "title": "Content-Machine",
+        "description": "Automatizei a criação de contos com IA, integrando publicação em WordPress e Facebook. Desenvolvi um pipeline multi-plataforma que reduziu drasticamente o esforço manual, permitindo uma produção de conteúdo eficiente e escalável.",
+        "highlights": [
+          "Pipeline IA multi-plataforma",
+          "Automação de publicação"
+        ],
+        "tech": ["Python", "IA", "WordPress"],
+        "status": "live"
+      },
+      {
+        "title": "Forge",
+        "description": "No Forge, eu projetei uma plataforma para equipes de jogos que combina ferramentas de planejamento por fatia, estimativas por senioridade e cards IA. Meu objetivo foi facilitar a colaboração e organização de equipes criativas, trazendo inovação ao processo de desenvolvimento de jogos.",
+        "highlights": ["Planejamento por fatia", "Cards IA tipo Trello"],
+        "tech": ["Laravel", "IA"],
+        "status": "wip"
+      },
+      {
+        "title": "PlantGrow",
+        "description": "Desenvolvi o PlantGrow para ajudar agricultores a planejar cultivos de forma inteligente. Criei um sistema de recomendações baseadas em fotos e agendamento automático, com um backend robusto em Laravel e um frontend intuitivo em Flutter.",
+        "highlights": ["Recomendações por foto", "Agendamento automático"],
+        "tech": ["Laravel", "Flutter", "Análise de Imagens"],
+        "status": "archived"
+      },
+      {
+        "title": "Wowe",
+        "description": "Com o Wowe, eu criei uma rede social para fotógrafos, focada em segurança e eficiência. Desenvolvi um pipeline seguro para upload e processamento de imagens, utilizando uma arquitetura fullstack com Flutter e Laravel.",
+        "highlights": ["Pipeline seguro de imagens", "Arquitetura fullstack"],
+        "tech": ["Flutter", "Laravel"],
+        "status": "archived"
+      },
+      {
+        "title": "GOAT",
+        "description": "GOAT foi meu primeiro jogo mobile, onde implementei controles por acelerômetro e um sistema de ranking online. Desenvolvi um backend customizado em CodeIgniter, explorando sensores mobile de forma pioneira.",
+        "highlights": ["Ranking online", "Sensores mobile"],
+        "tech": ["Flash Air", "CodeIgniter", "Sensores Mobile"],
+        "status": "archived"
+      },
+      {
+        "title": "TZ Games",
+        "description": "Fundar a TZ Games foi um marco na minha carreira. Desenvolvi arcades portáteis, criei imagens ISO para RetroOrange Pi e projetei uma CNC para fabricação. Minha liderança integrou hardware e software de forma inovadora.",
+        "highlights": [
+          "Desenvolvimento de arcades",
+          "Integração hardware/software"
+        ],
+        "tech": ["Python", "RetroOrange Pi", "CNC", "GPIO"],
+        "status": "archived"
+      },
+      {
+        "title": "GPIO Controller",
+        "description": "Desenvolvi um controlador GPIO em Python para RetroOrange Pi, que foi essencial para arcades portáteis. Este projeto open-source impactou a comunidade maker, mostrando minha dedicação à inovação.",
+        "highlights": [
+          "Controlador GPIO open-source",
+          "Integração com RetroOrange Pi"
+        ],
+        "tech": ["Python", "GPIO", "RetroOrange Pi"],
+        "status": "live"
+      },
+      {
+        "title": "RetrieverApp",
+        "description": "No RetrieverApp, implementei fluxos de pagamento seguros com Stripe, garantindo reconciliação e webhooks confiáveis. Meu trabalho melhorou a experiência de pagamento para milhares de usuários.",
+        "highlights": ["Pagamentos seguros", "Reconciliação confiável"],
+        "tech": ["Laravel", "Stripe"],
+        "status": "live"
+      },
+      {
+        "title": "IdealPet",
+        "description": "Liderar a refatoração do IdealPet foi um desafio que abracei. Transformei a arquitetura de Clean Arch para MVC com GetX, eliminando gargalos de entrega. Também implementei reconhecimento facial de pets e identidade NFC, trazendo inovação ao app.",
+        "highlights": ["Reconhecimento facial de pets", "Identidade NFC"],
+        "tech": ["Flutter", "GetX", "NFC", "Computer Vision"],
+        "status": "live"
+      },
+      {
+        "title": "Safebox",
+        "description": "Com o Safebox, desenvolvi um cofre local criptografado com AES-256, integrando sync diferencial cifrado e backup assinado. Minha solução trouxe segurança e compliance para armazenamento de dados sensíveis.",
+        "highlights": ["Cofre cifrado", "Backup assinado"],
+        "tech": ["Criptografia", "Sync cifrado", "RBAC"],
+        "status": "wip"
+      },
+      {
+        "title": "Morian",
+        "description": "No Morian, lidero o desenvolvimento de um platformer 2.5D autoral. Enfrentei desafios de design procedural e integração de assets no Blender, criando ferramentas colaborativas que otimizam o fluxo de trabalho da equipe.",
+        "highlights": ["Design procedural", "Ferramentas colaborativas"],
+        "tech": ["Unreal Engine 5", "Blender", "Blueprints"],
+        "status": "wip"
+      }
+    ],
+    "categories": {
+      "languages": [
+        "Dart/Flutter",
+        "TypeScript/React",
+        "PHP/Laravel",
+        "Python",
+        "Java"
+      ],
+      "databases": ["MongoDB", "MySQL", "PostgreSQL", "Microsoft SQL Server"],
+      "frameworks": ["GetX", "Next.js", "Firebase", "Drift", "Spring Boot"],
+      "cloud_observability": [
+        "Firebase",
+        "Datadog",
+        "Grafana",
+        "Crashlytics",
+        "Cloud (GCP/Azure/AWS)",
+        "Cloud Functions",
+        "Cloud Run",
+        "Firestore",
+        "Realtime Database"
+      ],
+      "devops": ["CI/CD", "Feature Flags", "GitFlow", "Docker", "Kubernetes"],
+      "others": ["Mobile ML (ML Kit)", "NFC", "Payments Integrations"]
+    }
+  },
+  "tools": {
+    "title": "Ferramentas que construí",
+    "libsTitle": "Bibliotecas Flutter & DevTools",
+    "skillsTitle": "Skills",
+    "items": [
+      {
+        "name": "DevAlive",
+        "description": "Extensão VSCode para monitorar saúde de backends em tempo real."
+      },
+      {
+        "name": "Scripts de automação",
+        "description": "Ferramentas Python para geração de conteúdo com IA e automação de processos."
+      },
+      {
+        "name": "Drift DevTools",
+        "description": "Devtools para integração e exploração do banco Drift em Flutter."
+      },
+      {
+        "name": "Drift Studio",
+        "description": "Extensão VSCode para explorar bancos Drift em dispositivos/emuladores."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vamos construir algo incrível",
+    "subtitle": "Aberto a oportunidades, freelance ou só uma boa conversa técnica.",
+    "cta": "Me Contate",
+    "email": "ericktarzia@gmail.com",
+    "phone": "+55 11 953603057"
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "languages": [
+        "Dart/Flutter",
+        "TypeScript/React",
+        "PHP/Laravel",
+        "Python",
+        "Java"
+      ],
+      "databases": ["MongoDB", "MySQL", "PostgreSQL", "Microsoft SQL Server"],
+      "frameworks": ["GetX", "Next.js", "Firebase", "Drift", "Spring Boot"],
+      "cloud_observability": [
+        "Firebase",
+        "Datadog",
+        "Grafana",
+        "Crashlytics",
+        "Cloud (GCP/Azure/AWS)",
+        "Cloud Functions",
+        "Cloud Run",
+        "Firestore",
+        "Realtime Database"
+      ],
+      "devops": ["CI/CD", "Feature Flags", "GitFlow", "Docker", "Kubernetes"],
+      "others": ["Mobile ML (ML Kit)", "NFC", "Payments Integrations"]
+    }
+  },
+  "libs": {
+    "flutter": [
+      {
+        "name": "realtime_image_labeler",
+        "link": "https://pub.dev/packages/realtime_image_labeler",
+        "desc": "Rotulagem de imagens em tempo real baseada em TFLite SSD MobileNet para Flutter"
+      },
+      {
+        "name": "drift_devtools",
+        "link": "https://pub.dev/packages/drift_devtools",
+        "desc": "Devtools para integração com Drift DB"
+      },
+      {
+        "name": "drift-studio",
+        "link": "https://marketplace.visualstudio.com/items?itemName=ErickTarzia.drift-studio",
+        "desc": "Extensão VSCode para explorar Drift DB em dispositivo/emulador"
+      },
+      {
+        "name": "DevAlive",
+        "link": "https://marketplace.visualstudio.com/items?itemName=ErickTarzia.devalive",
+        "desc": "Extensão para monitoramento de status de ambientes de desenvolvimento"
+      }
+    ]
+  }
+}
