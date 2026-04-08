@@ -11,6 +11,9 @@ rm -rf .next out docs
 echo "📦 Buildando projeto..."
 npm run build
 
+bash scripts/fix-paths.sh
+
+
 echo "criando pasta..."
 mkdir -p docs
 

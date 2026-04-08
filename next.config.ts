@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: "./", // 👈 ESSA LINHA RESOLVE
+  assetPrefix: "./",
 };
 
 module.exports = nextConfig;
