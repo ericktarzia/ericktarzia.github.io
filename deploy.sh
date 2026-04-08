@@ -20,6 +20,8 @@ mkdir -p docs
 echo "📂 Copiando para docs..."
 cp -r out/* docs/
 
+touch docs/.nojekyll 
+
 echo "📝 Garantindo CNAME..."
 echo "tarzia.tech" > docs/CNAME
 
