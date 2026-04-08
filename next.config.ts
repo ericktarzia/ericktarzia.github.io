@@ -1,11 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
-  assetPrefix: "./",
+  output: "export", // Enables static export
+  images: { unoptimized: true }, // GitHub Pages doesn't support Next.js image optimization
 };
-
-module.exports = nextConfig;
+export default nextConfig;
