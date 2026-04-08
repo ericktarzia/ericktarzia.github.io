@@ -9,6 +9,7 @@ import React, {
 } from "react";
 
 import ptTranslations from "../../locales/pt.json";
+import enTranslations from "../../locales/en.json";
 
 type Locale = "en" | "pt";
 
@@ -16,73 +17,7 @@ type Translations = typeof import("../../locales/pt.json");
 
 const translationsMap: Record<Locale, Translations> = {
   pt: ptTranslations,
-  en: {
-    hero: { title: "", subtitle: "" },
-    about: {
-      title: "",
-      p1: "",
-      p2: "",
-      p3: "",
-      p4: "",
-      p5: "",
-      p6: "",
-    },
-    nav: {
-      projects: "",
-      about: "",
-      tools: "",
-      hardware: "",
-      games: "",
-      wip: "",
-      databases: "",
-      experience: "",
-      contact: "",
-      name: "",
-    },
-    external: {
-      skynews: { text: "", url: "" },
-    },
-    projects: {
-      title: "",
-      view: "",
-      items: [],
-      categories: {
-        languages: [],
-        databases: [],
-        frameworks: [],
-        cloud_observability: [],
-        devops: [],
-        others: [],
-      },
-    },
-    tools: {
-      title: "",
-      libsTitle: "",
-      skillsTitle: "",
-      items: [],
-    },
-    contact: {
-      title: "",
-      subtitle: "",
-      cta: "",
-      email: "",
-      phone: "",
-    },
-    skills: {
-      title: "",
-      categories: {
-        languages: [],
-        databases: [],
-        frameworks: [],
-        cloud_observability: [],
-        devops: [],
-        others: [],
-      },
-    },
-    libs: {
-      flutter: [{ name: "", link: "", desc: "" }],
-    },
-  },
+  en: enTranslations,
 };
 
 type TContext = {

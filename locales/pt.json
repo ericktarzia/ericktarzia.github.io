@@ -5,12 +5,12 @@
   },
   "about": {
     "title": "Sobre mim",
-    "p1": "Não sou só desenvolvedor — projeto e entrego sistemas que resolvem problemas reais, de hardware embarcado a apps mobile e backends escaláveis.",
-    "p2": "Com mais de 20 anos de experiência, atuo de sistemas embarcados e CNC até cloud, IA e apps mobile em produção.",
-    "p3": "Liderei times, lancei produtos e tive reconhecimento internacional pelo trabalho comunitário — fui presidente do Cartel Moto Clube durante a crise da COVID-19, coordenando ações de ajuda destacadas pela SkyNews.",
-    "p4": "Especialista em Flutter, resgate de legados, sistemas de alta demanda e arquitetura pragmática. Atuo como staff/lead engineer para desbloquear times e gerar impacto.",
-    "p5": "Expertise profunda em bancos de dados (MongoDB, MySQL, PostgreSQL, SQL Server), observabilidade e performance. Experiência inicial com Ajax/jQuery moldou minha entrega incremental e pragmática.",
-    "p6": "Fora da engenharia, naveguei liderança comunitária e áreas criativas — CACs e tatuagem me ensinaram liderança em crise, atenção ao detalhe e execução padrão solda em tudo que faço."
+    "p1": "Sou mais do que um desenvolvedor: projeto e entrego sistemas que resolvem problemas reais, do hardware embarcado aos apps mobile e backends escaláveis.",
+    "p2": "Com mais de 20 anos de experiência, já atuei desde sistemas embarcados e CNC até cloud, IA e apps mobile em produção.",
+    "p3": "Liderei times, lancei produtos e fui reconhecido internacionalmente pelo trabalho comunitário — presidi o Cartel Moto Clube durante a crise da COVID-19, coordenando ações de ajuda destacadas pela SkyNews.",
+    "p4": "Especialista em Flutter, resgate de legados, sistemas de alta demanda e arquitetura pragmática. Atuo como staff/lead engineer para desbloquear times e gerar impacto real.",
+    "p5": "Tenho expertise profunda em bancos de dados (MongoDB, MySQL, PostgreSQL, SQL Server), observabilidade e performance. Minha experiência inicial com Ajax/jQuery moldou minha entrega incremental e pragmática.",
+    "p6": "Além da engenharia, atuei por anos como tatuador profissional e sou CAC (atirador esportivo). Essas experiências me ensinaram disciplina, precisão, liderança em situações de pressão e atenção máxima ao detalhe — valores que levo para cada projeto de tecnologia."
   },
   "nav": {
     "projects": "Projetos",

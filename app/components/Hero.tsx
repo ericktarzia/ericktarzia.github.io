@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import pt from "../../locales/pt.json";
+import { useLocale } from "../i18n/LocaleProvider";
 
 function Hero() {
+  const { t } = useLocale();
   return (
     <section className="h-screen flex flex-col justify-center items-center text-center px-4">
       <motion.h1
@@ -12,7 +13,7 @@ function Hero() {
         transition={{ duration: 0.6 }}
         className="text-5xl md:text-7xl font-bold mb-6"
       >
-        {pt.hero.title}
+        {t("hero.title")}
       </motion.h1>
 
       <motion.p
@@ -21,7 +22,7 @@ function Hero() {
         transition={{ delay: 0.2 }}
         className="text-xl md:text-2xl text-gray-400 mb-6 max-w-2xl"
       >
-        {pt.hero.subtitle}
+        {t("hero.subtitle")}
       </motion.p>
     </section>
   );

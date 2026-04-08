@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import pt from "../../locales/pt.json";
+import { useLocale } from "../i18n/LocaleProvider";
 
 type Tool = {
   name: string;
@@ -9,9 +9,9 @@ type Tool = {
 };
 
 function Tools() {
-  // Força idioma pt-BR
-  const tools: Tool[] = (pt.tools.items ?? []) as Tool[];
-  const libs = (pt.libs.flutter ?? []) as {
+  const { t } = useLocale();
+  const tools = (t("tools.items") ?? []) as Tool[];
+  const libs = (t("libs.flutter") ?? []) as {
     name: string;
     link?: string;
     desc?: string;
@@ -26,21 +26,20 @@ function Tools() {
     (lib) => lib.name === "drift-studio" || lib.name === "DevAlive",
   );
 
-  const libsTitle = pt.tools.libsTitle || "Flutter libs & tools";
-  const skillsTitle = pt.tools.skillsTitle || pt.skills.title;
-
-  const skills = (pt.skills.categories ?? {}) as Record<string, string[]>;
+  const libsTitle = t("tools.libsTitle") || "Flutter libs & tools";
+  const skillsTitle = t("tools.skillsTitle") || t("skills.title");
+  const skills = (t("skills.categories") ?? {}) as Record<string, string[]>;
 
   return (
     <section id="tools" className="py-20 px-6 bg-black text-white">
       <h2 className="text-4xl font-bold text-center mb-12">
-        Ferramentas e Habilidades
+        {t("tools.title") || "Ferramentas e Habilidades"}
       </h2>
 
       {flutterLibs.length > 0 && (
         <div className="max-w-4xl mx-auto mt-12">
           <h3 className="text-2xl font-semibold mb-4 text-center text-blue-500">
-            Bibliotecas Flutter
+            {libsTitle}
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {flutterLibs.map((l, i) => (
@@ -52,9 +51,7 @@ function Tools() {
               >
                 <div className="font-semibold text-blue-400">{l.name}</div>
                 <div className="text-sm text-gray-400 leading-relaxed">
-                  {l.name === "realtime_image_labeler"
-                    ? "Resolve o problema de rotulagem de imagens em tempo real com TFLite SSD MobileNet, permitindo análises rápidas e precisas em Flutter."
-                    : "Facilita a integração e exploração de bancos de dados Drift, otimizando o fluxo de trabalho em Flutter."}
+                  {l.desc}
                 </div>
               </a>
             ))}
@@ -65,7 +62,7 @@ function Tools() {
       {vscodeExtensions.length > 0 && (
         <div className="max-w-4xl mx-auto mt-12">
           <h3 className="text-2xl font-semibold mb-4 text-center text-blue-500">
-            Extensões VSCode
+            VSCode Extensions
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
             {vscodeExtensions.map((l, i) => (
@@ -77,9 +74,7 @@ function Tools() {
               >
                 <div className="font-semibold text-blue-400">{l.name}</div>
                 <div className="text-sm text-gray-400 leading-relaxed">
-                  {l.name === "drift-studio"
-                    ? "Permite explorar bancos de dados Drift diretamente no VSCode, simplificando o desenvolvimento e depuração."
-                    : "Monitora o status de ambientes de desenvolvimento em tempo real, garantindo maior confiabilidade e eficiência."}
+                  {l.desc}
                 </div>
               </a>
             ))}
