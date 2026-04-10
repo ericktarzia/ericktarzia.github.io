@@ -34,10 +34,12 @@ export default function Navbar() {
     id: string,
   ) => {
     e.preventDefault();
-    const target = document.querySelector(id);
+    const target = document.querySelector(id) as HTMLElement;
     if (target) {
       window.scrollTo({
-        // top: target.offsetTop - 80, // Adjust for navbar height
+        // ignore error since we want to scroll even if the target is not found
+
+        top: target.offsetTop - 80, // Adjust for navbar height
         behavior: "smooth",
       });
     }
@@ -87,6 +89,17 @@ export default function Navbar() {
             }`}
           >
             {t("nav.tools")}
+          </a>
+          <a
+            href="#skills"
+            onClick={(e) => handleSmoothScroll(e, "#skills")}
+            className={`hover:text-white ${
+              activeSection === "skills"
+                ? "text-white font-bold"
+                : "text-gray-400"
+            }`}
+          >
+            {t("nav.skills")}
           </a>
           <a
             href="#contact"

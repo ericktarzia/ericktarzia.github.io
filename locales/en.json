@@ -22,6 +22,7 @@
     "databases": "Databases",
     "experience": "Experience",
     "contact": "Contact",
+    "skills": "Skills",
     "name": "Erick Tarzia"
   },
   "external": {
@@ -58,8 +59,9 @@
           "Financial integrations and observability"
         ],
         "tech": [
+          "Fintech",
           "Flutter",
-          "Next.js (BFF)",
+          "Nest.js (BFF)",
           "ML Kit",
           "UNICO",
           "Crashlytics",

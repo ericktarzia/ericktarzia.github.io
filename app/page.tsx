@@ -5,6 +5,7 @@ import Tools from "./components/Tools";
 import Navbar from "./components/Navbar";
 import CursorGlow from "./components/CursorGlow";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <About />
       <Tools />
+      <Skills />
       <Contact />
       <CursorGlow />
     </main>

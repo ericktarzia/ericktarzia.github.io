@@ -10,7 +10,7 @@ export default function About() {
   const sky = t("external.skynews") as { text?: string; url?: string };
 
   return (
-    <section id="about" className="py-20 px-6 bg-black text-white">
+    <section id="about" className="py-20 px-6 bg-gray-400 text-black">
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -21,29 +21,29 @@ export default function About() {
             {t("about.title")}
           </h2>
 
-          <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+          <p className="text-lg text-black mb-4 leading-relaxed">
             {t("about.p1")}
           </p>
 
-          <p className="text-gray-400 mb-3 leading-relaxed">{t("about.p2")}</p>
+          <p className="text-gray-900 mb-3 leading-relaxed">{t("about.p2")}</p>
 
-          <p className="text-gray-400 mb-3 leading-relaxed">{t("about.p3")}</p>
+          <p className="text-gray-900 mb-3 leading-relaxed">{t("about.p3")}</p>
 
-          <p className="text-gray-500 mb-2 leading-relaxed">{t("about.p4")}</p>
-          <p className="text-gray-400 mb-2 leading-relaxed">{t("about.p5")}</p>
-          <p className="text-gray-400 mb-4 leading-relaxed">{t("about.p6")}</p>
+          <p className="text-gray-900 mb-2 leading-relaxed">{t("about.p4")}</p>
+          <p className="text-gray-900 mb-2 leading-relaxed">{t("about.p5")}</p>
+          <p className="text-gray-900 mb-4 leading-relaxed">{t("about.p6")}</p>
 
           <div className="flex flex-wrap gap-3 items-center">
-            <span className="px-3 py-1 bg-gray-800 rounded text-sm">
+            <span className="px-3 py-1 bg-gray-200 rounded text-sm">
               20+ years
             </span>
-            <span className="px-3 py-1 bg-gray-800 rounded text-sm">
+            <span className="px-3 py-1 bg-gray-200 rounded text-sm">
               Staff / Lead Engineer
             </span>
             <a
               href={sky?.url ?? "#"}
               target="_blank"
-              className="px-3 py-1 bg-blue-600 rounded text-sm hover:opacity-90"
+              className="px-3 py-1 bg-blue-600 rounded text-sm hover:opacity-90 text-white px-10 py-10"
             >
               {sky?.text ?? "SkyNews"}
             </a>

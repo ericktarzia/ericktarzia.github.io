@@ -57,7 +57,8 @@ function Projects() {
 
   return (
     <motion.section
-      className="py-20 px-6 bg-black text-white"
+      id="projects"
+      className="py-20 px-6 bg-gray-900 text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
