@@ -1,23 +1,92 @@
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Tools from "./components/Tools";
-import Navbar from "./components/Navbar";
-import CursorGlow from "./components/CursorGlow";
-import Contact from "./components/Contact";
-import Skills from "./components/Skills";
+"use client";
+
+import Image from "next/image";
+import { useEffect } from "react";
+import { useLocale } from "./i18n/LocaleProvider";
+
+const content = {
+  pt: {
+    nav: ["Soluções", "Cases", "Sobre nós"], contact: "Orçamento", language: "EN",
+    eyebrow: "ENGENHARIA DE SOFTWARE · BRASIL",
+    headline: <>Tecnologia que<br />transforma ideias<br /><em>em soluções reais.</em></>,
+    intro: "Da estratégia ao produto em produção: construímos software sob medida para resolver desafios de negócio com clareza, qualidade e parceria de longo prazo.",
+    cta: "Solicite um orçamento", work: "Conheça nossos cases", scroll: "SOLUÇÕES QUE MOVEM NEGÓCIOS",
+    trustTitle: "Tecnologia pensada para o seu próximo passo.", trust: ["Produtos digitais", "Engenharia de software", "Modernização de sistemas", "Liderança técnica"],
+    eteraKicker: "CASE EM DESTAQUE · PRODUTO PRÓPRIO", eteraIntro: "Retro gaming é melhor junto.",
+    eteraCopy: "O Etera reúne biblioteca de jogos clássicos, partidas online e uma comunidade ativa em uma experiência integrada para Windows e Linux. Um produto completo, do launcher à sala multiplayer.",
+    visit: "Conheça o Etera", platform: "Disponível para Windows e Linux", imageAlt: "Interface real da plataforma Etera com detalhes de jogo e coleções",
+    featureTitle: "Uma casa nova para os clássicos.", featureSub: "Um ecossistema de retrogaming pensado para descobrir, jogar e compartilhar — com cada parte trabalhando em conjunto.",
+    features: [
+      ["01", "Biblioteca para explorar", "Descoberta de jogos por console, coleções visuais e páginas detalhadas para escolher sua próxima partida."],
+      ["02", "Netplay com seus amigos", "Crie salas multiplayer P2P e convide outras pessoas para jogar online, com baixa latência e conexão simplificada."],
+      ["03", "Conquistas e progressão", "Desbloqueie conquistas, acumule XP e acompanhe sua evolução nos rankings semanais e gerais."],
+      ["04", "Launcher que prepara tudo", "O launcher mantém Etera, EteraNet, RetroArch e BIOS alinhados para reduzir configuração manual e problemas de sincronização."]
+    ],
+    featureKicker: "RECURSOS E EXPERIÊNCIA", libraryCaption: "BIBLIOTECA · COLEÇÕES · DESCOBERTA", onlineCaption: "NETPLAY · SALAS MULTIPLAYER", progressCaption: "PROGRESSÃO · XP · RANKINGS", launcherCaption: "LAUNCHER · CONFIGURAÇÃO SIMPLIFICADA",
+    oracleKicker: "SEGUNDO DESTAQUE · APP ANDROID", oracleHeadline: <>Autoconhecimento<br />com tecnologia e<br /><em>um toque de magia.</em></>, oracleCopy: "O Oráculo.ia combina leituras de tarô, interpretação de sonhos e inteligência artificial em uma experiência acolhedora para explorar ideias, emoções e caminhos pessoais.", oracleFeatures: [["Tarô com guias de IA", "Tire três cartas para passado, presente e futuro. Cada guia espiritual oferece uma perspectiva própria e pode ser desbloqueado conforme você evolui."], ["Interpretação de sonhos", "Registre seus sonhos e explore símbolos e emoções com a leitura assistida por IA e pelo guia que você escolher."], ["Relatório de bem-estar", "Depois de 15 leituras de tarô e 15 interpretações de sonhos, o app reúne temas recorrentes e reflexões em um relatório pessoal."]], oracleImageAlt: "Captura do relatório de bem-estar do aplicativo Oráculo.ia", oracleTarotAlt: "Tela de relatório de bem-estar do Oráculo.ia com resumo e gráfico pessoal", oracleScreenOne: "01 / VISÃO GERAL", oracleScreenTwo: "02 / RELATÓRIO PESSOAL", oracleSite: "Conheça o site", oraclePlay: "Baixar no Google Play", oracleCaption: "ORÁCULO.IA · APP ANDROID",
+    solutionsKicker: "O QUE FAZEMOS", solutionsTitle: "Capacidade técnica para tirar boas ideias do papel.", solutionsSub: "Atuamos lado a lado com seu time para transformar necessidades complexas em software útil, confiável e pronto para evoluir.",
+    services: [["Produto digital", "Estratégia, descoberta e desenvolvimento de produtos centrados nas pessoas."], ["Plataformas e sistemas", "Aplicações, integrações e backends desenhados para sua operação."], ["Modernização", "Evolução de sistemas legados com segurança e continuidade."], ["Liderança técnica", "Arquitetura, mentoria e direção para times de engenharia."]],
+    casesKicker: "EXPERIÊNCIA EM PRODUÇÃO", casesTitle: "Experiência aplicada a desafios reais.", casesSub: "Uma seleção de projetos em que tecnologia e contexto de negócio precisam funcionar juntos.",
+    cases: [["PDVs", "Pagamentos · Eventos", "Plataforma de vendas e pagamentos para grandes operações, integrando provedores de pagamento e dispositivos."], ["Mottu", "Mobilidade · Fintech", "Experiências mobile, localização em tempo real e fluxos financeiros para uma operação de mobilidade."], ["Compart", "Trade marketing", "Plataforma de auditoria e inteligência de dados para marcas e operações no ponto de venda."], ["Oráculo.ia", "Inteligência artificial", "Aplicativo de tarot e interpretação de sonhos com personas de IA e uma experiência mobile acessível."]],
+    aboutKicker: "SOBRE A TARZIA TECNOLOGIA", aboutTitle: <>Da ideia à operação.<br /><em>Com engenharia em cada etapa.</em></>,
+    about: "Somos uma empresa de engenharia de software liderada por Erick Tarzia. Com mais de 20 anos de experiência, criamos produtos digitais e sistemas para contextos em que confiabilidade, escala e experiência do usuário importam. Trabalhamos com proximidade, decisões técnicas pragmáticas e compromisso com a entrega.",
+    years: "anos de experiência em software", approach: "Parceria próxima, engenharia sólida e foco no problema certo.",
+    contactKicker: "VAMOS CONSTRUIR O PRÓXIMO PASSO?", contactTitle: <>Seu desafio merece<br /><em>uma boa solução.</em></>, contactSub: "Conte sobre seu projeto e receba uma conversa inicial para entender escopo, caminhos técnicos e orçamento.", whatsapp: "Pedir orçamento pelo WhatsApp", email: "Prefiro e-mail", footer: "Engenharia de software feita com intenção.", rights: "Todos os direitos reservados.",
+  },
+  en: {
+    nav: ["Solutions", "Case studies", "About us"], contact: "Get a quote", language: "PT", eyebrow: "SOFTWARE ENGINEERING · BRAZIL",
+    headline: <>Technology that<br />turns ideas<br /><em>into real solutions.</em></>, intro: "From strategy to production: we build custom software that solves business challenges with clarity, quality, and long-term partnership.", cta: "Request a quote", work: "Explore our work", scroll: "SOLUTIONS THAT MOVE BUSINESS",
+    trustTitle: "Technology built for your next step.", trust: ["Digital products", "Software engineering", "System modernization", "Technical leadership"],
+    eteraKicker: "FEATURED CASE · OWN PRODUCT", eteraIntro: "Retro gaming is better together.", eteraCopy: "Etera brings a library of classic games, online play, and an active community together in one experience for Windows and Linux. A complete product, from launcher to multiplayer room.", visit: "Explore Etera", platform: "Available for Windows and Linux", imageAlt: "Real Etera platform interface showing game details and collections",
+    featureTitle: "A new home for the classics.", featureSub: "A retro gaming ecosystem designed to discover, play, and share—with every part working together.",
+    features: [["01", "A library to explore", "Discover games by console, browse visual collections, and explore detailed pages to choose your next game."], ["02", "Netplay with friends", "Create P2P multiplayer rooms and invite others to play online, with low latency and a simplified connection."], ["03", "Achievements and progress", "Unlock achievements, earn XP, and follow your progress on weekly and all-time leaderboards."], ["04", "A launcher that handles setup", "The launcher keeps Etera, EteraNet, RetroArch, and BIOS aligned to reduce manual setup and synchronization issues."]],
+    featureKicker: "FEATURES AND EXPERIENCE", libraryCaption: "LIBRARY · COLLECTIONS · DISCOVERY", onlineCaption: "NETPLAY · MULTIPLAYER ROOMS", progressCaption: "PROGRESS · XP · LEADERBOARDS", launcherCaption: "LAUNCHER · SIMPLIFIED SETUP",
+    oracleKicker: "SECOND FEATURED CASE · ANDROID APP", oracleHeadline: <>Self-discovery<br />with technology and<br /><em>a touch of magic.</em></>, oracleCopy: "Oráculo.ia combines tarot readings, dream interpretation, and artificial intelligence in a welcoming experience to explore ideas, emotions, and personal paths.", oracleFeatures: [["Tarot with AI guides", "Draw three cards for past, present, and future. Each spiritual guide offers a distinct perspective and can be unlocked as you progress."], ["Dream interpretation", "Record your dreams and explore symbols and emotions with AI-assisted readings and a guide of your choice."], ["Wellbeing report", "After 15 tarot readings and 15 dream interpretations, the app brings recurring themes and reflections together in a personal report."]], oracleImageAlt: "Screenshot of the wellbeing report in the Oráculo.ia app", oracleTarotAlt: "Oráculo.ia wellbeing report with a personal summary and chart", oracleScreenOne: "01 / OVERVIEW", oracleScreenTwo: "02 / PERSONAL REPORT", oracleSite: "Visit the website", oraclePlay: "Get it on Google Play", oracleCaption: "ORÁCULO.IA · ANDROID APP",
+    solutionsKicker: "WHAT WE DO", solutionsTitle: "Technical capability to bring good ideas to life.", solutionsSub: "We work alongside your team to turn complex needs into useful, reliable software that is ready to evolve.",
+    services: [["Digital products", "Strategy, discovery, and product development centered on people."], ["Platforms and systems", "Applications, integrations, and backends designed for your operations."], ["Modernization", "Evolving legacy systems safely and continuously."], ["Technical leadership", "Architecture, mentoring, and direction for engineering teams."]],
+    casesKicker: "PROVEN IN PRODUCTION", casesTitle: "Experience applied to real challenges.", casesSub: "A selection of projects where technology and business context need to work together.",
+    cases: [["PDVs", "Payments · Events", "Sales and payment platform for large operations, integrating payment providers and devices."], ["Mottu", "Mobility · Fintech", "Mobile experiences, real-time location, and financial flows for a mobility operation."], ["Compart", "Trade marketing", "Audit and data intelligence platform for brands and point-of-sale operations."], ["Oráculo.ia", "Artificial intelligence", "Tarot and dream interpretation app with AI personas and an accessible mobile experience."]],
+    aboutKicker: "ABOUT TARZIA TECNOLOGIA", aboutTitle: <>From idea to operation.<br /><em>Engineering at every step.</em></>, about: "We are a software engineering company led by Erick Tarzia. With more than 20 years of experience, we build digital products and systems for contexts where reliability, scale, and user experience matter. We work closely with our clients, make pragmatic technical decisions, and stay committed to delivery.", years: "years of software experience", approach: "Close partnership, strong engineering, and focus on the right problem.",
+    contactKicker: "READY TO BUILD WHAT'S NEXT?", contactTitle: <>Your challenge deserves<br /><em>a great solution.</em></>, contactSub: "Tell us about your project and start a conversation about scope, technical options, and a quote.", whatsapp: "Request a quote on WhatsApp", email: "Email us", footer: "Software engineering with intention.", rights: "All rights reserved.",
+  },
+} as const;
+
+function Mark() {
+  return <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 4 4.8 51.2a5.3 5.3 0 0 0 4.6 8h45.2a5.3 5.3 0 0 0 4.6-8L32 4Z" stroke="url(#brandGradient)" strokeWidth="2.4"/><path d="M37.4 13.4 52 38.7c4.5 7.8-1.1 17.5-10.1 17.5H20.1c-8.8 0-14.3-9.5-9.9-17.1l12.5-21.6" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round"/><circle cx="32" cy="39" r="6.2" fill="#13B8EA"/><defs><linearGradient id="brandGradient" x1="5" y1="57" x2="57" y2="8" gradientUnits="userSpaceOnUse"><stop stopColor="#13B8EA"/><stop offset="1" stopColor="#3159D9"/></linearGradient></defs></svg>;
+}
+
+const whatsappUrl = "https://wa.me/551151234988";
 
 export default function Home() {
-  return (
-    <main className="bg-black text-white">
-      <Navbar />
-      <Hero />
-      <Projects />
-      <About />
-      <Tools />
-      <Skills />
-      <Contact />
-      <CursorGlow />
-    </main>
-  );
+  const { locale, setLocale } = useLocale();
+  const c = content[locale];
+
+  useEffect(() => {
+    document.documentElement.lang = locale === "pt" ? "pt-BR" : "en";
+  }, [locale]);
+
+  return <main>
+    <header className="header"><div className="header-inner"><a href="#top" className="wordmark" aria-label="Tarzia Tecnologia"><Mark/><span>TARZIA<small>TECNOLOGIA</small></span></a><nav className="main-nav" aria-label="Navegação principal">{c.nav.map((label, i) => <a key={label} href={["#solutions", "#cases", "#about"][i]}>{label}</a>)}</nav><div className="header-actions"><button className="lang-button" onClick={() => setLocale(locale === "pt" ? "en" : "pt")} aria-label={locale === "pt" ? "Switch language to English" : "Mudar idioma para português"}>{c.language}</button><a href="#contact" className="header-cta">{c.contact}<span>↗</span></a><a href={whatsappUrl} target="_blank" rel="noreferrer" className="mobile-wa" aria-label="WhatsApp">↗</a></div></div></header>
+
+    <section id="top" className="hero"><div className="hero-inner"><div className="hero-copy"><div className="eyebrow"><i/>{c.eyebrow}</div><h1>{c.headline}</h1><p>{c.intro}</p><div className="hero-actions"><a className="button button-blue" href="#contact">{c.cta}<span>↗</span></a><a className="hero-link" href="#cases">{c.work}<span>↓</span></a></div></div><div className="hero-visual"><div className="hero-visual-note"><span>CASE / 001</span><b>ETERA</b><small>RETRO GAMING PLATFORM</small></div><Image src="/projects/etera-home.webp" alt={c.imageAlt} width={1600} height={675} priority className="hero-product-image"/><div className="hero-stamp"><Mark/><span>SOFTWARE<br/>BUILT TO LAST</span></div></div></div><div className="hero-scroll"><span>{c.scroll}</span><i/></div></section>
+
+    <section className="trust-bar"><div className="trust-inner"><h2>{c.trustTitle}</h2>{c.trust.map((item, i) => <div className="trust-item" key={item}><span>0{i+1}</span>{item}</div>)}</div></section>
+
+    <section id="cases" className="etera-section"><div className="etera-heading"><div><span className="eyebrow"><i/>{c.eteraKicker}</span><h2>Etera<span className="period">.</span></h2><h3>{c.eteraIntro}</h3><p>{c.eteraCopy}</p><div className="etera-platform"><span>WINDOWS</span><b>·</b><span>LINUX</span></div><a className="button button-light" href="https://etera.tarzia.tech" target="_blank" rel="noreferrer">{c.visit}<span>↗</span></a></div><div className="etera-image-wrap"><Image src="/projects/etera-home.webp" alt={c.imageAlt} width={1600} height={675} className="etera-main-image"/><div className="image-index"><span>ETERA / DESKTOP APP</span><span>01 — 04</span></div></div></div>
+      <div className="etera-feature-heading"><div><span className="eyebrow"><i/>{c.featureKicker}</span><h3>{c.featureTitle}</h3></div><p>{c.featureSub}</p></div>
+      <div className="etera-feature-grid">{c.features.map(([number, title, description], i) => <article className="etera-feature" key={number}><span className="feature-number">{number}</span><div className="feature-image"><Image src={["/projects/etera-collections.webp", "/projects/etera-netplay.webp", "/projects/etera-rankings.webp", "/projects/etera-launcher.webp"][i]} alt={title} width={1600} height={675}/></div><div className="feature-copy"><h4>{title}</h4><p>{description}</p><span className="feature-caption">{[c.libraryCaption, c.onlineCaption, c.progressCaption, c.launcherCaption][i]}</span></div></article>)}</div>
+    </section>
+
+    <section id="oraculo" className="oraculo-section"><div className="oraculo-inner"><div className="oraculo-copy"><div className="eyebrow"><i/>{c.oracleKicker}</div><div className="oracle-brand"><Image src="/projects/oraculo-icon.webp" alt="" width={68} height={68}/><h2>Oráculo<span>.ia</span></h2></div><h3>{c.oracleHeadline}</h3><p className="oracle-description">{c.oracleCopy}</p><div className="oracle-actions"><a className="button oracle-site-button" href="https://oraculo.tarzia.tech" target="_blank" rel="noreferrer">{c.oracleSite}<span>↗</span></a><a className="oracle-play-button" href="https://play.google.com/store/apps/details?id=com.ericktarzia.oraculo" target="_blank" rel="noreferrer">{c.oraclePlay}<span>↗</span></a></div><span className="oracle-caption">{c.oracleCaption}</span></div><div className="oracle-screenshots"><div className="oracle-screen oracle-screen-one"><Image src="/projects/oraculo-home.webp" alt={c.oracleImageAlt} width={240} height={480}/><span>{c.oracleScreenOne}</span></div><div className="oracle-screen oracle-screen-two"><Image src="/projects/oraculo-tarot.webp" alt={c.oracleTarotAlt} width={240} height={480}/><span>{c.oracleScreenTwo}</span></div><div className="oracle-orbit"/></div><div className="oracle-feature-list">{c.oracleFeatures.map(([title, description], i) => <article className="oracle-feature" key={title}><span>0{i+1}</span><div><h4>{title}</h4><p>{description}</p></div></article>)}</div></div></section>
+
+    <section id="solutions" className="solutions section-frame"><div className="section-intro"><span className="eyebrow"><i/>{c.solutionsKicker}</span><h2>{c.solutionsTitle}</h2><p>{c.solutionsSub}</p></div><div className="solutions-grid">{c.services.map(([title, description], i) => <article className="solution-card" key={title}><span className="solution-number">0{i+1}</span><div className="solution-icon">{["✳", "▦", "↗", "⌘"][i]}</div><h3>{title}</h3><p>{description}</p><span className="solution-line"/></article>)}</div></section>
+
+    <section className="cases-section section-frame"><div className="cases-heading"><div className="section-intro"><span className="eyebrow"><i/>{c.casesKicker}</span><h2>{c.casesTitle}</h2></div><p>{c.casesSub}</p></div><div className="case-grid">{c.cases.map(([name, category, description], i) => <article className={`case-card case-card-${i+1}`} key={name}><div className="case-top"><span>0{i+1} / CASE</span><span className="case-arrow">↗</span></div><div className="case-monogram">{name.slice(0,1)}</div><span className="case-category">{category}</span><h3>{name}</h3><p>{description}</p></article>)}</div></section>
+
+    <section id="about" className="about-section"><div className="about-inner"><div className="about-copy"><span className="eyebrow"><i/>{c.aboutKicker}</span><h2>{c.aboutTitle}</h2><p>{c.about}</p><div className="about-cta"><a href={whatsappUrl} target="_blank" rel="noreferrer">{c.cta}<span>↗</span></a></div></div><div className="about-proof"><div className="proof-top"><Mark/><span>TARZIA<br/>TECNOLOGIA</span></div><div className="proof-number">20<span>+</span></div><h3>{c.years}</h3><div className="proof-rule"/><p>{c.approach}</p><span className="proof-coordinate">EXPERIENCE · ENGINEERING · DELIVERY</span></div></div></section>
+
+    <section id="contact" className="contact-section"><div className="contact-inner"><div><span className="eyebrow"><i/>{c.contactKicker}</span><h2>{c.contactTitle}</h2><p>{c.contactSub}</p></div><div className="contact-actions"><a className="button button-blue" href={whatsappUrl} target="_blank" rel="noreferrer">{c.whatsapp}<span>↗</span></a><a className="email-link" href="mailto:ericktarzia@gmail.com">{c.email}<span>↗</span></a><span className="phone-number">+55 11 5123-4988</span></div></div></section>
+
+    <footer className="footer"><a href="#top" className="wordmark"><Mark/><span>TARZIA<small>TECNOLOGIA</small></span></a><p>{c.footer}</p><div className="footer-right"><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp · 11 5123-4988</a><span>© {new Date().getFullYear()} Tarzia Tecnologia. {c.rights}</span></div></footer>
+  </main>;
 }
